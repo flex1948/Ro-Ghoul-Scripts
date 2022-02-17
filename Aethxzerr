@@ -1,9 +1,17 @@
 spawn(function()
 local message = Instance.new("Message",workspace)
-message.Text = "Script loaded.Press Insert button for active script.)"
+message.Text = "Script loaded.Press Insert button for active script."
 wait(2)
 message:Destroy()
 end)
+wait(0.5)
+spawn(function()
+local message = Instance.new("Message",workspace)
+message.Text = "Script by Aethxzer and zHeiw. Don't Scam! "
+wait(2)
+message:Destroy()
+end)
+
 
 local userInputService = game:GetService("UserInputService")
 
@@ -14,7 +22,7 @@ userInputService.InputBegan:Connect(function(input , gameProcessedEvent)
 		if input.KeyCode == Enum.KeyCode.Insert then
             spawn(function()
 local message = Instance.new("Message",workspace)
-message.Text = "Script activated.Don't spam!.)"
+message.Text = "Script activated.Don't spam!. "
 wait(1.7)
 message:Destroy()
 end)
