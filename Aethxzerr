@@ -5,13 +5,6 @@ wait(2)
 message:Destroy()
 end)
 wait(0.5)
-spawn(function()
-local message = Instance.new("Message",workspace)
-message.Text = "Script by Aethxzer and zHeiw. Don't Scam! "
-wait(2)
-message:Destroy()
-end)
-
 
 local userInputService = game:GetService("UserInputService")
 
