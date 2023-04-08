@@ -9,8 +9,10 @@ function server_hop()
     end
     if #servers > 0 then
         game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, servers[math.random(1, #servers)])
-        game.Players.LocalPlayer.OnTeleport:Connect(function()
-            queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/zHeiw/Ro-Ghoul-Scripts/main/gyafinder"))')
+        game.Players.LocalPlayer.OnTeleport:Connect(function(State)
+            if State == Enum.TeleportState.Started then
+                queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/zHeiw/Ro-Ghoul-Scripts/main/gyafinder"))')
+            end
         end)
     else
         print("Couldn't find a server.")
