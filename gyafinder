@@ -1,4 +1,4 @@
-repeat wait() until game.Loaded
+repeat wait() until game.Loaded and KRNL_LOADED
 
 function server_hop()
     local servers = {}
