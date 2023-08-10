@@ -37,6 +37,5 @@ check_gya()
 while wait(.1) do
   if not game:GetService("Workspace").NPCSpawns.GyakusatsuSpawn:FindFirstChild("Gyakusatsu") then
     server_hop()
-    break
   end
 end
