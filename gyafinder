@@ -22,14 +22,14 @@ function check_gya()
     if not game:GetService("Workspace").NPCSpawns.GyakusatsuSpawn:FindFirstChild("Gyakusatsu") then
         server_hop()
     else
-        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Race"):WaitForChild("Chose"):InvokeServer(_G.team)
-        wait(2)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/TrapstarKSSKSKSKKS/Main/main/RoGhoul.lua"))()
         game.StarterGui:SetCore("SendNotification", {
             Title = "[+] Gya Found";
             Text = "[+] flex her daim!";
             Duration = 5
         })
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Race"):WaitForChild("Chose"):InvokeServer(_G.team)
+        wait(2)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TrapstarKSSKSKSKKS/Main/main/RoGhoul.lua"))()
     end
 end
 
