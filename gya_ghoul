@@ -29,13 +29,12 @@ function check_gya()
         game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Race"):WaitForChild("Chose"):InvokeServer("Ghoul")
         wait(.5)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/TrapstarKSSKSKSKKS/Main/main/TrapHub.lua"))()
+        while wait(.1) do
+          if not game:GetService("Workspace").NPCSpawns.GyakusatsuSpawn:FindFirstChild("Gyakusatsu") then
+            server_hop()
+          end
+        end
     end
 end
 
 check_gya()
-
-while wait(.1) do
-  if not game:GetService("Workspace").NPCSpawns.GyakusatsuSpawn:FindFirstChild("Gyakusatsu") then
-    server_hop()
-  end
-end
