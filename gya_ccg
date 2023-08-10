@@ -28,7 +28,7 @@ function check_gya()
         })
         game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Race"):WaitForChild("Chose"):InvokeServer("CCG")
         wait(2)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/TrapstarKSSKSKSKKS/Main/main/RoGhoul.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TrapstarKSSKSKSKKS/Main/main/TrapHub.lua"))()
     end
 end
 
