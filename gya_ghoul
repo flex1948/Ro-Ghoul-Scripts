@@ -27,7 +27,7 @@ function check_gya()
             Duration = 5
         })
         game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Race"):WaitForChild("Chose"):InvokeServer("Ghoul")
-        wait(2)
+        wait(.5)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/TrapstarKSSKSKSKKS/Main/main/TrapHub.lua"))()
     end
 end
