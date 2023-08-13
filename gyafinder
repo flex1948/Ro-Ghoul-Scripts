@@ -10,7 +10,6 @@ function server_hop()
     if #servers > 0 then
         game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, servers[math.random(1, #servers)])
         game.Players.LocalPlayer.OnTeleport:Connect(function(State)
-            queue_on_teleport('_G.team = "'.._G.team..'"')
             queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/zHeiw/Ro-Ghoul-Scripts/main/gyafinder"))()')
         end)
     else
@@ -27,9 +26,6 @@ function check_gya()
             Text = "[+] flex her daim!";
             Duration = 5
         })
-        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Race"):WaitForChild("Chose"):InvokeServer(_G.team)
-        wait(2)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/TrapstarKSSKSKSKKS/Main/main/RoGhoul.lua"))()
     end
 end
 
