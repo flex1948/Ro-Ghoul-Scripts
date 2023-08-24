@@ -8,7 +8,7 @@ function server_hop()
         end
     end
     if #servers > 0 then
-        wait(3)
+        wait(math.random(7,10))
         game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, servers[math.random(1, #servers)])
         game.Players.LocalPlayer.OnTeleport:Connect(function(State)
             queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/zHeiw/Ro-Ghoul-Scripts/main/gya_ghoul"))()')
